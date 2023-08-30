@@ -59,7 +59,7 @@ while opcao>0 and opcao<=4: #entra no loop caso o usuário informe uma das opç�
             print('')
 
             opcao = int(input("\nContato nº: ")) #o usuario informa qual deseja editar dentre os usuarios listados
-            opcao1 = int(input("\nVocê deseja alterar o (1)Nome ou (2)Telefone ? ")) #o usuario informa qual deseja editar dentre os usuarios listados
+            opcao1 = int(input("\nVocê deseja alterar o (1)Nome ou (2)Telefone (3)Ambos ? ")) #o usuario informa qual deseja editar dentre os usuarios listados
             
             if (opcao1 == 1):
                 cont=cont-2
@@ -69,12 +69,22 @@ while opcao>0 and opcao<=4: #entra no loop caso o usuário informe uma das opç�
                 print('Nome do contato editado com sucesso')  
                 print('***************************')
                             
-            if (opcao == 2):
+            if (opcao1 == 2):
                 cont=cont-2
                 telefone = input("Informe o novo número de telefone: ")
                 agenda_telefone[cont]=telefone
                 os.system('cls')
                 print('Telefone do contato editado com sucesso')  
+                print('***************************')
+
+            if (opcao1 == 3):
+                cont=cont-2
+                nome = input("Informe o novo nome do contato: ")
+                agenda_nome[cont]=nome
+                telefone = input("Informe o novo número de telefone: ")
+                agenda_telefone[cont]=telefone
+                os.system('cls')
+                print('Nome E Telefone do contato editados com sucesso')  
                 print('***************************')
                 
 
