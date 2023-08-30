@@ -17,7 +17,6 @@ while opcao<0 or opcao>4:
     opcao = int(input("\nInforme a opção desejada: "))
     os.system('cls')
 
-
 while opcao>0 and opcao<=4:
         if (opcao==1):
             os.system('cls')
@@ -31,7 +30,6 @@ while opcao>0 and opcao<=4:
             print('***************************')  
             print('') 
             
-
         if (opcao==2):
             os.system('cls')
             print('*****CONTATOS CADASTRADOS*****')
@@ -40,7 +38,6 @@ while opcao>0 and opcao<=4:
             print('***************************')  
             print('')
              
-        
         if (opcao==3):
             os.system('cls')
             print('*****EDITAR UM CONTATO*****')
@@ -58,8 +55,17 @@ while opcao>0 and opcao<=4:
             telefone = input()
             cont=cont-2
             agenda[cont]=nome+" "+telefone
+            os.system('cls')
             print('Contato editado com sucesso')  
-            print('***************************')  
+            print('***************************')
+            print("Lista atualizada:")  
+            print("")
+            cont=1
+            for p in agenda: #imprime cada elemento da lista (para cada elemento, faça)
+                print(cont,": ")
+                print (p)
+                print("")
+                cont=cont+1  
 
         if (opcao==4):
             os.system('cls')
@@ -71,15 +77,21 @@ while opcao>0 and opcao<=4:
                 print (p)
                 print("")
                 cont=cont+1
-            
             opcao = int(input("\nContato nº: "))
             opcao=opcao-1
             agenda.pop(opcao) 
+            os.system('cls')
             print("Contato removido com sucesso!")
-            print('***************************')  
+            print('***************************')
+            print("Lista atualizada:")  
             print("")
+            cont=1
+            for p in agenda: #imprime cada elemento da lista (para cada elemento, faça)
+                print(cont,": ")
+                print (p)
+                print("")
+                cont=cont+1
 
-       
         print('***************************')  
         print('Informe a opção desejada: ')
         print('(1) Inserir um novo contato')
