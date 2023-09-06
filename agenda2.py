@@ -31,7 +31,7 @@ while opcao>0 and opcao<=4: #entra no loop caso o usuário informe uma das opç�
             print('***************************')  
             print('') 
             
-        if (opcao==2): #listar os contatos cadastrados
+        if (opcao==2): #listar os contatos cadastrados.
             os.system('cls')
             print('*****CONTATOS CADASTRADOS*****')
             cont=0
